@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,20 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  subs: any;
+  pushMessage: 'Push message will be displayed here';
+
+  constructor(
+    public route: ActivatedRoute
+  ) {
+    this.subs = this.route.data
+      .subscribe(v => {
+        console.log(v);
+        this.pushMessage = v.message;
+      });
+    // if (params.data.message) {
+    //   this.pushMessage = params.data.message;
+    // }
+  }
 
 }

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Push Details
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,14 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Push Details</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  
+    <h2>Push Details Page</h2>
+    <p>
+      Clicking push notification should navigate you here
+    </p>
+    <h6>{{pushMessage}}</h6>
   <app-explore-container name="Tab 1 page"></app-explore-container>
 </ion-content>
